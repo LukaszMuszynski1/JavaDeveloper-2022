@@ -12,4 +12,4 @@ public class Car extends Device {
         this.fuelType = fuelType;
         this.value = value;
     }
-}/
+}
