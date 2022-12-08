@@ -4,7 +4,7 @@ public class Animal {
     public static final double DEFAULT_DOG_WEIGHT = 6.0;
     public static final double DEFAULT_CAT_WEIGHT = 4.0;
     public static final double DEFAULT_HORSE_WEIGHT = 800.0;
-    public static final double DEFAULT_ANIMAL_WEIGHT = 1.0;
+    public static final double DEFAULT_ANIMAL_WEIGHT = 3.0;
 
     public final String species;
     public String name;
@@ -31,7 +31,7 @@ public class Animal {
         this.isAlive = true;
         this.species = species;
         if (weight <= 0) {
-            System.out.println("Błąd, dodano wage domyslną");
+            System.out.println("Błąd, dodano wagę domyslną");
             this.weight = DEFAULT_ANIMAL_WEIGHT;
         } else {
             this.weight = weight;
@@ -40,9 +40,9 @@ public class Animal {
 
     public void checkIfItIsAlive() {
         if (isAlive) {
-            System.out.println("Jasne że żyje!");
+            System.out.println("Jasne że żyję!");
         } else {
-            System.out.println("No niestety, troche za pozno");
+            System.out.println("No niestety, trochę za późno!");
         }
     }
 
@@ -51,7 +51,7 @@ public class Animal {
             weight += (foodWeight * 0.3);
             System.out.println("Dzięki za żarcie");
         } else {
-            System.out.println("Troche za pozno");
+            System.out.println("Trochę za późno!");
         }
     }
 
@@ -60,6 +60,9 @@ public class Animal {
             System.out.println("Hallo Policja!");
         } else {
             weight -= distance * 0.1;
+            if (weight <= 0) {
+                this.isAlive = false;
+            }
         }
     }
 
