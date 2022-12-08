@@ -10,4 +10,4 @@ public class Device {
         this.producer = producer;
         this.model = model;
     }
-}
+}/

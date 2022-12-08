@@ -44,7 +44,7 @@ public class Main {
 
         //Zadanie nr 5
 
-        System.out.println(me.getCar());
+       // System.out.println(me.getCar());
 
     }
 }
